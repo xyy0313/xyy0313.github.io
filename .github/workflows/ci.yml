@@ -1,11 +1,11 @@
 # 项目名
-name: dumi book test
+name: git home
 
 # 只有在main分支发生push事件时触发
 on:
   push:
     branches:
-      - master
+      - gh-pages
 
 # 工作流
 jobs:
@@ -17,11 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      # 下载node，我这里指定了15.x，这个版本可随意，高于dumi规定的node版本即可
+      # 下载node，我这里指定了18.x，这个版本可随意，高于dumi规定的node版本即可
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 15.x
+          node-version: 18.x
 
       # 打包代码
       - name: Build Project
