@@ -1,7 +1,8 @@
 {
   "name": "git_home",
   "version": "0.0.1",
-  "description": "A static site based on dumi",
+  "description": "个人主页",
+  "homepage": ".",
   "license": "MIT",
   "scripts": {
     "build": "dumi build",
@@ -29,6 +30,5 @@
   },
   "authors": [
     "xyy——5210@163.com"
-  ],
-  "homepage": "."
+  ]
 }
