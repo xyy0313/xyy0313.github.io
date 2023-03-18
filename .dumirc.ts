@@ -6,7 +6,5 @@ export default defineConfig({
   },
   base: repo,
   publicPath: repo,
-  // base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
-  // publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   outputPath: "home"
 });

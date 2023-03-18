@@ -6,7 +6,7 @@ hero:
   actions:
     - text: 你好
       link: /
-    - text: World
+    - text: 啊哈
       link: /
 features:
   - title: Hello
