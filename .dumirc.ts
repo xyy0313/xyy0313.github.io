@@ -1,9 +1,10 @@
 import { defineConfig } from 'dumi';
-const repo = '13632632437';
+const repo = 'home';
 export default defineConfig({
   themeConfig: {
     name: 'git_home',
   },
-  // base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
-  // publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/'
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  outputPath: repo
 });
