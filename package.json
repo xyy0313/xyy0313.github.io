@@ -2,7 +2,7 @@
   "name": "git_home",
   "version": "0.0.1",
   "description": "个人主页",
-  "homepage": ".",
+  "homepage": "/dist",
   "license": "MIT",
   "scripts": {
     "build": "dumi build",
@@ -29,6 +29,6 @@
     "prettier": "^2.7.1"
   },
   "authors": [
-    "xyy——5210@163.com"
+    "xyy_5210@163.com"
   ]
 }
