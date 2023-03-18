@@ -2,7 +2,7 @@
   "name": "git_home",
   "version": "0.0.1",
   "description": "个人主页",
-  "homepage": "/dist",
+  "homepage": "/home",
   "license": "MIT",
   "scripts": {
     "build": "dumi build",
