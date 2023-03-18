@@ -1,5 +1,5 @@
 import { defineConfig } from 'dumi';
-const repo = 'dist';
+const repo = '13632632437';
 export default defineConfig({
   themeConfig: {
     name: 'git_home',
