@@ -1,5 +1,5 @@
 ---
-title: A static site based on dumi
+title: 君可层见-兰陵缭乱
 hero:
   title: Site
   description: A static site based on dumi
