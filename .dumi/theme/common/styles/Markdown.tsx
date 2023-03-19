@@ -333,32 +333,32 @@ export default () => {
                 white-space: nowrap;
               }
 
-              &:nth-child(2) {
+              &:nth-of-type(2) {
                 width: 55%;
                 min-width: 160px;
               }
 
-              &:nth-child(3) {
+              &:nth-of-type(3) {
                 width: 22%;
                 color: ${token.magenta7};
                 font-size: ${Math.max(token.fontSize - 1, 12)}px;
               }
 
-              &:nth-child(4) {
+              &:nth-of-type(4) {
                 width: 15%;
                 font-size: ${Math.max(token.fontSize - 1, 12)}px;
               }
 
-              &:nth-child(5) {
+              &:nth-of-type(5) {
                 width: 8%;
                 font-size: ${Math.max(token.fontSize - 1, 12)}px;
               }
 
-              &:nth-last-child(3):first-of-type {
+              &:nth-last-of-type(3):first-of-type {
                 width: 38%;
               }
 
-              &:nth-last-child(3):first-of-type ~ td:nth-last-child(2) {
+              &:nth-last-of-type(3):first-of-type ~ td:nth-last-of-type(2) {
                 width: 70%;
               }
             }
@@ -381,7 +381,7 @@ export default () => {
             padding: 16px 0;
             background: ${demoGridColor};
 
-            &:nth-child(2n + 1) {
+            &:nth-of-type(2n + 1) {
               background: ${new TinyColor(demoGridColor).setAlpha(0.75).toHex8String()};
             }
           }

@@ -161,24 +161,24 @@ const genSpinStyle: GenerateStyle<SpinToken> = (token: SpinToken): CSSObject => 
         animationTimingFunction: 'linear',
         animationDirection: 'alternate',
 
-        '&:nth-child(1)': {
+        '&:nth-of-type(1)': {
           top: 0,
           insetInlineStart: 0,
         },
 
-        '&:nth-child(2)': {
+        '&:nth-of-type(2)': {
           top: 0,
           insetInlineEnd: 0,
           animationDelay: '0.4s',
         },
 
-        '&:nth-child(3)': {
+        '&:nth-of-type(3)': {
           insetInlineEnd: 0,
           bottom: 0,
           animationDelay: '0.8s',
         },
 
-        '&:nth-child(4)': {
+        '&:nth-of-type(4)': {
           bottom: 0,
           insetInlineStart: 0,
           animationDelay: '1.2s',
