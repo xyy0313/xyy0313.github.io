@@ -11,7 +11,7 @@ const dataSource = {
   textWrapper: { className: 'banner0-text-wrapper' },
   title: {
     className: 'banner0-title',
-    children: 'http://rrrjuw5md.hn-bkt.clouddn.com/banner-content-image.png',
+    children: 'https://github-image-xyy.oss-cn-beijing.aliyuncs.com/banner-content-image.png',
   },
   content: {
     className: 'banner0-content',

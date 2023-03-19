@@ -39,7 +39,7 @@ const Logo: React.FC<LogoProps> = () => {
   return (
     <h1 style={{ height: 64 }}>
       <Link to="/index-cn" css={logo}>
-        <img src="http://rrrjuw5md.hn-bkt.clouddn.com/git_hub_logo.jpg" alt="logo" />
+        <img src="https://github-image-xyy.oss-cn-beijing.aliyuncs.com/github-user-logo.jpg" alt="logo" />
         <span css={title}>Front Peasant Worker</span>
       </Link>
     </h1>
