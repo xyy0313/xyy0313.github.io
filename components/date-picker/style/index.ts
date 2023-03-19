@@ -244,8 +244,8 @@ const genPickerCellInnerStyle = (token: SharedPickerToken): CSSObject => {
     },
 
     // Edge start
-    [`tr > &-in-view${pickerCellCls}-range-hover:first-child::after,
-      tr > &-in-view${pickerCellCls}-range-hover-end:first-child::after,
+    [`tr > &-in-view${pickerCellCls}-range-hover:first-of-type::after,
+      tr > &-in-view${pickerCellCls}-range-hover-end:first-of-type::after,
       &-in-view${pickerCellCls}-start${pickerCellCls}-range-hover-edge-start${pickerCellCls}-range-hover-edge-start-near-range::after,
       &-in-view${pickerCellCls}-range-hover-edge-start:not(${pickerCellCls}-range-hover-edge-start-near-range)::after,
       &-in-view${pickerCellCls}-range-hover-start::after`]: {
@@ -427,7 +427,7 @@ export const genPanelStyle = (token: SharedPickerToken): CSSObject => {
             fontWeight: 'inherit',
             verticalAlign: 'top',
 
-            '&:not(:first-child)': {
+            '&:not(:first-of-type)': {
               marginInlineStart: paddingXS,
             },
 
@@ -736,7 +736,7 @@ export const genPanelStyle = (token: SharedPickerToken): CSSObject => {
               transition: `background ${motionDurationMid}`,
             },
 
-            '&:first-child:before': {
+            '&:first-of-type:before': {
               borderStartStartRadius: borderRadiusSM,
               borderEndStartRadius: borderRadiusSM,
             },
@@ -848,7 +848,7 @@ export const genPanelStyle = (token: SharedPickerToken): CSSObject => {
             content: '""',
           },
 
-          '&:not(:first-child)': {
+          '&:not(:first-of-type)': {
             borderInlineStart: `${lineWidth}px ${lineType} ${colorSplit}`,
           },
 

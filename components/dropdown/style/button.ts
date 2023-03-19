@@ -15,7 +15,7 @@ const genButtonStyle: GenerateStyle<DropdownToken> = (token) => {
           opacity: opacityLoading,
         },
 
-        [`&:last-child:not(:first-child):not(${antCls}-btn-icon-only)`]: {
+        [`&:last-child:not(:first-of-type):not(${antCls}-btn-icon-only)`]: {
           paddingInline: paddingXS,
         },
       },

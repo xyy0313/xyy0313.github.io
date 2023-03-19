@@ -235,7 +235,7 @@ const genFormItemStyle: GenerateStyle<FormToken> = (token) => {
         flexDirection: 'column',
         flexGrow: 1,
 
-        [`&:first-child:not([class^="'${rootPrefixCls}-col-'"]):not([class*="' ${rootPrefixCls}-col-'"])`]:
+        [`&:first-of-type:not([class^="'${rootPrefixCls}-col-'"]):not([class*="' ${rootPrefixCls}-col-'"])`]:
           {
             width: '100%',
           },

@@ -26,7 +26,7 @@ You can add an icon beside the slider to make it meaningful.
   color: rgba(0, 0, 0, 0.45);
 }
 
-.icon-wrapper .anticon:first-child {
+.icon-wrapper .anticon:first-of-type {
   left: 0;
 }
 

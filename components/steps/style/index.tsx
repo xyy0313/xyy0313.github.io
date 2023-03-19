@@ -268,7 +268,7 @@ const genStepsClickableStyle: GenerateStyle<StepsToken, CSSObject> = (token) => 
         paddingInlineStart: token.padding,
         whiteSpace: 'nowrap',
 
-        '&:first-child': {
+        '&:first-of-type': {
           paddingInlineStart: 0,
         },
         [`&:last-child ${componentCls}-item-title`]: {

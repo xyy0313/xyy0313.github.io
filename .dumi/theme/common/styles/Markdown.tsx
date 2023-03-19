@@ -279,7 +279,7 @@ export default () => {
               text-align: left;
               border: 1px solid ${token.colorSplit};
 
-              &:first-child {
+              &:first-of-type {
                 border-left: 1px solid ${token.colorSplit};
               }
 
@@ -325,7 +325,7 @@ export default () => {
 
             td {
               border-width: 1px 0;
-              &:first-child {
+              &:first-of-type {
                 width: 18%;
                 min-width: 58px;
                 color: #595959;
@@ -354,11 +354,11 @@ export default () => {
                 font-size: ${Math.max(token.fontSize - 1, 12)}px;
               }
 
-              &:nth-last-child(3):first-child {
+              &:nth-last-child(3):first-of-type {
                 width: 38%;
               }
 
-              &:nth-last-child(3):first-child ~ td:nth-last-child(2) {
+              &:nth-last-child(3):first-of-type ~ td:nth-last-child(2) {
                 width: 70%;
               }
             }

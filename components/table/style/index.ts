@@ -188,7 +188,7 @@ const genTableStyle: GenerateStyle<TableToken, CSSObject> = (token) => {
                 }px -${tablePaddingHorizontal}px`,
                 [`${componentCls}-tbody > tr:last-child > td`]: {
                   borderBottom: 0,
-                  '&:first-child, &:last-child': {
+                  '&:first-of-type, &:last-child': {
                     borderRadius: 0,
                   },
                 },

@@ -315,7 +315,7 @@ const genTransferStyle: GenerateStyle<TransferToken> = (token: TransferToken): C
         [`${antCls}-btn`]: {
           display: 'block',
 
-          '&:first-child': {
+          '&:first-of-type': {
             marginBottom: marginXXS,
           },
 

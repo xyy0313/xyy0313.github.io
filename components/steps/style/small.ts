@@ -16,7 +16,7 @@ const genStepsSmallStyle: GenerateStyle<StepsToken, CSSObject> = (token) => {
     [`&${componentCls}-small`]: {
       [`&${componentCls}-horizontal:not(${componentCls}-label-vertical) ${componentCls}-item`]: {
         paddingInlineStart: token.paddingSM,
-        '&:first-child': {
+        '&:first-of-type': {
           paddingInlineStart: 0,
         },
       },

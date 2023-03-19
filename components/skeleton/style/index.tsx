@@ -280,7 +280,7 @@ const genBaseStyle: GenerateStyle<SkeletonToken> = (token: SkeletonToken) => {
           },
         },
 
-        [`${skeletonParagraphCls}> li:last-child:not(:first-child):not(:nth-child(2))`]: {
+        [`${skeletonParagraphCls}> li:last-child:not(:first-of-type):not(:nth-child(2))`]: {
           width: '61%',
         },
       },

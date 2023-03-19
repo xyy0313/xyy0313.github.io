@@ -7,7 +7,7 @@
 Customize render list with Tree component.
 
 <style>
-.tree-transfer .ant-transfer-list:first-child {
+.tree-transfer .ant-transfer-list:first-of-type {
   flex: none;
   width: 50%;
 }

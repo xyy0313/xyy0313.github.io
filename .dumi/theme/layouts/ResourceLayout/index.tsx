@@ -49,7 +49,7 @@ const useStyle = () => {
           font-size: 30px;
           line-height: 38px;
 
-          &:first-child {
+          &:first-of-type {
             margin-top: 88px;
           }
         }

@@ -225,7 +225,7 @@ const genBaseStyle: GenerateStyle<ListToken> = (token) => {
             lineHeight: token.lineHeight,
             textAlign: 'center',
 
-            [`&:first-child`]: {
+            [`&:first-of-type`]: {
               paddingInlineStart: 0,
             },
           },
@@ -299,7 +299,7 @@ const genBaseStyle: GenerateStyle<ListToken> = (token) => {
         '> li': {
           padding: `0 ${padding}px`,
 
-          [`&:first-child`]: {
+          [`&:first-of-type`]: {
             paddingInlineStart: 0,
           },
         },

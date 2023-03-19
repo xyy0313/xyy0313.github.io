@@ -150,8 +150,8 @@ const genBorderedStyle: GenerateStyle<TableToken, CSSObject> = (token) => {
 
       // ============================ Nested ============================
       [`${componentCls}-cell`]: {
-        [`${componentCls}-container:first-child`]: {
-          // :first-child to avoid the case when bordered and title is set
+        [`${componentCls}-container:first-of-type`]: {
+          // :first-of-type to avoid the case when bordered and title is set
           borderTop: 0,
         },
         // https://github.com/ant-design/ant-design/issues/35577

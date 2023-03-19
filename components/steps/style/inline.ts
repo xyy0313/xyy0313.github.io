@@ -73,7 +73,7 @@ const genStepsInlineStyle: GenerateStyle<StepsToken, CSSObject> = (token) => {
           },
         },
 
-        [`&:first-child ${componentCls}-item-tail`]: {
+        [`&:first-of-type ${componentCls}-item-tail`]: {
           width: '50%',
           marginInlineStart: '50%',
         },

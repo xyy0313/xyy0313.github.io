@@ -12,7 +12,7 @@ const genButtonBorderStyle = (buttonTypeCls: string, borderColor: string) => ({
       },
     },
 
-    '&:not(:first-child)': {
+    '&:not(:first-of-type)': {
       [`&, & > ${buttonTypeCls}`]: {
         '&:not(:disabled)': {
           borderInlineStartColor: borderColor,
@@ -40,7 +40,7 @@ const genGroupStyle: GenerateStyle<ButtonToken> = (token) => {
             },
           },
 
-          '&:not(:first-child)': {
+          '&:not(:first-of-type)': {
             marginInlineStart: -lineWidth,
 
             [`&, & > ${componentCls}`]: {

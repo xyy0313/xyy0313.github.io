@@ -85,7 +85,7 @@ const useStyle = () => {
           }
         }
 
-        ${antCls}-menu-item-group:first-child {
+        ${antCls}-menu-item-group:first-of-type {
           ${antCls}-menu-item-group-title {
             margin-top: 0;
           }

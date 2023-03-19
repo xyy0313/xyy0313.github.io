@@ -123,7 +123,7 @@ const floatButtonGroupStyle: GenerateStyle<FloatButtonToken, CSSObject> = (token
       [`${componentCls}-square`]: {
         borderRadius: 0,
         padding: 0,
-        '&:first-child': {
+        '&:first-of-type': {
           borderStartStartRadius: borderRadiusLG,
           borderStartEndRadius: borderRadiusLG,
         },
@@ -145,7 +145,7 @@ const floatButtonGroupStyle: GenerateStyle<FloatButtonToken, CSSObject> = (token
           marginTop: 0,
           borderRadius: 0,
           padding: token.paddingXXS,
-          '&:first-child': {
+          '&:first-of-type': {
             borderStartStartRadius: borderRadiusLG,
             borderStartEndRadius: borderRadiusLG,
           },

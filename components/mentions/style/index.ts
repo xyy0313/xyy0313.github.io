@@ -176,7 +176,7 @@ const genMentionsStyle: GenerateStyle<MentionsToken> = (token) => {
               backgroundColor: controlItemBgHover,
             },
 
-            '&:first-child': {
+            '&:first-of-type': {
               borderStartStartRadius: borderRadiusLG,
               borderStartEndRadius: borderRadiusLG,
               borderEndStartRadius: 0,

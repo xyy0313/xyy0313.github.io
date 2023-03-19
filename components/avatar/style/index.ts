@@ -120,7 +120,7 @@ const genGroupStyle: GenerateStyle<AvatarToken> = (token) => {
         borderColor: avatarGroupBorderColor,
       },
 
-      [`> *:not(:first-child)`]: {
+      [`> *:not(:first-of-type)`]: {
         marginInlineStart: avatarGroupSpace,
       },
     },

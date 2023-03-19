@@ -55,7 +55,7 @@ const getGroupRadioStyle: GenerateStyle<RadioToken> = (token) => {
         zIndex: 1,
       },
 
-      [`> ${antCls}-badge:not(:first-child) > ${antCls}-button-wrapper`]: {
+      [`> ${antCls}-badge:not(:first-of-type) > ${antCls}-button-wrapper`]: {
         borderInlineStart: 'none',
       },
     },
@@ -324,7 +324,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         height: '100%',
       },
 
-      '&:not(:first-child)': {
+      '&:not(:first-of-type)': {
         '&::before': {
           position: 'absolute',
           insetBlockStart: -lineWidth,
@@ -341,7 +341,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         },
       },
 
-      '&:first-child': {
+      '&:first-of-type': {
         borderInlineStart: `${lineWidth}px ${lineType} ${colorBorder}`,
         borderStartStartRadius: borderRadius,
         borderEndStartRadius: borderRadius,
@@ -352,7 +352,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         borderEndEndRadius: borderRadius,
       },
 
-      '&:first-child:last-child': {
+      '&:first-of-type:last-child': {
         borderRadius,
       },
 
@@ -361,7 +361,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         fontSize: fontSizeLG,
         lineHeight: `${controlHeightLG - lineWidth * 2}px`,
 
-        '&:first-child': {
+        '&:first-of-type': {
           borderStartStartRadius: borderRadiusLG,
           borderEndStartRadius: borderRadiusLG,
         },
@@ -378,7 +378,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         paddingBlock: 0,
         lineHeight: `${controlHeightSM - lineWidth * 2}px`,
 
-        '&:first-child': {
+        '&:first-of-type': {
           borderStartStartRadius: borderRadiusSM,
           borderEndStartRadius: borderRadiusSM,
         },
@@ -415,7 +415,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
           backgroundColor: radioCheckedColor,
         },
 
-        '&:first-child': {
+        '&:first-of-type': {
           borderColor: radioCheckedColor,
         },
 
@@ -462,7 +462,7 @@ const getRadioButtonStyle: GenerateStyle<RadioToken> = (token) => {
         borderColor: colorBorder,
         cursor: 'not-allowed',
 
-        '&:first-child, &:hover': {
+        '&:first-of-type, &:hover': {
           color: colorTextDisabled,
           backgroundColor: colorBgContainerDisabled,
           borderColor: colorBorder,

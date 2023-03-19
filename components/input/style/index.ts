@@ -242,7 +242,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
     [`> ${componentCls}`]: {
       display: 'table-cell',
 
-      '&:not(:first-child):not(:last-child)': {
+      '&:not(:first-of-type):not(:last-child)': {
         borderRadius: 0,
       },
     },
@@ -254,7 +254,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
         whiteSpace: 'nowrap',
         verticalAlign: 'middle',
 
-        '&:not(:first-child):not(:last-child)': {
+        '&:not(:first-of-type):not(:last-child)': {
           borderRadius: 0,
         },
       },
@@ -307,7 +307,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
         },
       },
 
-      '&-addon:first-child': {
+      '&-addon:first-of-type': {
         borderInlineEnd: 0,
       },
 
@@ -337,7 +337,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
     },
 
     // Reset rounded corners
-    [`> ${componentCls}:first-child, ${componentCls}-group-addon:first-child`]: {
+    [`> ${componentCls}:first-of-type, ${componentCls}-group-addon:first-of-type`]: {
       borderStartEndRadius: 0,
       borderEndEndRadius: 0,
 
@@ -349,7 +349,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
     },
 
     [`> ${componentCls}-affix-wrapper`]: {
-      [`&:not(:first-child) ${componentCls}`]: {
+      [`&:not(:first-of-type) ${componentCls}`]: {
         borderStartStartRadius: 0,
         borderEndStartRadius: 0,
       },
@@ -381,7 +381,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
         },
       },
 
-      [`&:not(:first-child), ${componentCls}-search &:not(:first-child)`]: {
+      [`&:not(:first-of-type), ${componentCls}-search &:not(:first-of-type)`]: {
         borderStartStartRadius: 0,
         borderEndStartRadius: 0,
       },
@@ -392,7 +392,7 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
       ...clearFix(),
 
       [`${componentCls}-group-addon, ${componentCls}-group-wrap, > ${componentCls}`]: {
-        '&:not(:first-child):not(:last-child)': {
+        '&:not(:first-of-type):not(:last-child)': {
           borderInlineEndWidth: token.lineWidth,
 
           '&:hover': {
@@ -456,10 +456,10 @@ export const genInputGroupStyle = (token: InputToken): CSSObject => {
         zIndex: 1, // https://github.com/ant-design/ant-design/issues/20371
       },
 
-      [`& > *:first-child,
-      & > ${antCls}-select:first-child > ${antCls}-select-selector,
-      & > ${antCls}-select-auto-complete:first-child ${componentCls},
-      & > ${antCls}-cascader-picker:first-child ${componentCls}`]: {
+      [`& > *:first-of-type,
+      & > ${antCls}-select:first-of-type > ${antCls}-select-selector,
+      & > ${antCls}-select-auto-complete:first-of-type ${componentCls},
+      & > ${antCls}-cascader-picker:first-of-type ${componentCls}`]: {
         borderStartStartRadius: token.borderRadius,
         borderEndStartRadius: token.borderRadius,
       },

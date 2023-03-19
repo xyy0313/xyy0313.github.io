@@ -76,7 +76,7 @@ const genStepsProgressDotStyle: GenerateStyle<StepsToken, CSSObject> = (token) =
           marginInlineStart: (token.descriptionWidth - stepsCurrentDotSize) / 2,
         },
         [`&-process ${componentCls}-icon`]: {
-          [`&:first-child ${componentCls}-icon-dot`]: {
+          [`&:first-of-type ${componentCls}-icon-dot`]: {
             insetInlineStart: 0,
           },
         },
@@ -120,7 +120,7 @@ const genStepsProgressDotStyle: GenerateStyle<StepsToken, CSSObject> = (token) =
         },
       },
 
-      [`${componentCls}-item:first-child ${componentCls}-icon-dot`]: {
+      [`${componentCls}-item:first-of-type ${componentCls}-icon-dot`]: {
         insetInlineStart: 0,
       },
       [`${componentCls}-item-content`]: {
