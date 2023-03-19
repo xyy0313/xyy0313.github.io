@@ -5,8 +5,26 @@
     "esModuleInterop": true,
     "baseUrl": "./",
     "paths": {
-      "@@/*": [".dumi/tmp/*"]
-    }
+      "@@/*": [".dumi/tmp/*"],
+      "antd": ["components/index.ts"],
+      "antd/es/*": ["components/*"],
+      "antd/lib/*": ["components/*"],
+      "antd/locale/*": ["components/locale/*"]
+    },
+    "strictNullChecks": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "stripInternal": true
   },
-  "include": [".dumi/**/*", ".dumirc.ts"]
+  "include": ["**/*", ".dumi/**/*", ".dumirc.ts"],
+  "exclude": ["node_modules", "docs-dist", "typings", ".dumi/tmp*/**/*"]
 }
