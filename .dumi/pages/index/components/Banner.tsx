@@ -7,6 +7,7 @@ import useSiteToken from '../../../hooks/useSiteToken';
 import SiteContext from '../../../theme/slots/SiteContext';
 import * as utils from '../../../theme/utils';
 import { GroupMask } from './Group';
+import Banner0 from './Banner0';
 
 const locales = {
   cn: {
@@ -74,49 +75,10 @@ export default function Banner({ children }: BannerProps) {
           alt=""
         />
       ) : (
-        <div
-          style={{
-            height: 320,
-            background: '#77C6FF',
-            display: 'flex',
-            flexWrap: 'nowrap',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              backgroundImage: `url(https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*6d50SboraPIAAAAAAAAAAAAAARQnAQ)`,
-              flex: 'auto',
-              backgroundRepeat: 'repeat-x',
-              backgroundPosition: '100% 0',
-              backgroundSize: 'auto 100%',
-            }}
-          />
-
-          <video style={{ height: '100%', objectFit: 'contain' }} autoPlay muted loop>
-            <source
-              src="https://mdn.alipayobjects.com/huamei_iwk9zp/afts/file/A*uYT7SZwhJnUAAAAAAAAAAAAADgCCAQ"
-              type="video/webm"
-            />
-            <source
-              src="https://gw.alipayobjects.com/mdn/rms_08e378/afts/file/A*XYYNQJ3NbmMAAAAAAAAAAAAAARQnAQ"
-              type="video/mp4"
-            />
-          </video>
-
-          <div
-            style={{
-              backgroundImage: `url(https://gw.alipayobjects.com/mdn/rms_08e378/afts/img/A*8ILtRrQlVDMAAAAAAAAAAAAAARQnAQ)`,
-              flex: 'auto',
-              backgroundRepeat: 'repeat-x',
-              backgroundPosition: '0 0',
-              backgroundSize: 'auto 100%',
-              marginLeft: -1,
-            }}
-          />
+        <div style={{ height: 780 }} >
+          <Banner0 />
         </div>
       )}
-
       {/* Logo */}
       <div style={{ position: 'relative', background: '#fff' }}>
         {/* Image Bottom Right */}
@@ -147,7 +109,7 @@ export default function Banner({ children }: BannerProps) {
           />
 
           <Typography.Title level={1} css={[styles.titleBase, styles.title]}>
-            Ant Design 5.0
+            xyy
           </Typography.Title>
           <Typography.Paragraph
             style={{

@@ -66,6 +66,8 @@ export type SiteData = {
   icons: Icons;
 };
 
+export const isImg = /^http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?/;
+
 export function preLoad(list: string[]) {
   if (typeof window !== 'undefined') {
     // 图处预加载；

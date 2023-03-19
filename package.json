@@ -35,6 +35,8 @@
     "html2sketch": "^1.0.1",
     "jsonml-to-react-element": "^1.1.11",
     "rc-footer": "^0.6.8",
+    "rc-queue-anim": "^2.0.0",
+    "rc-tween-one": "^3.0.6",
     "react-color": "^2.19.3",
     "sylvanas": "^0.6.1",
     "vanilla-jsoneditor": "^0.16.0"

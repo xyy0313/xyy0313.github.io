@@ -1,12 +1,8 @@
 import { css } from '@emotion/react';
-import { Link, useLocation } from 'dumi';
+import { Link } from 'dumi';
 import * as React from 'react';
-import useSiteToken from '../../../hooks/useSiteToken';
-import * as utils from '../../utils';
 
 const useStyle = () => {
-  const { token } = useSiteToken();
-  const { headerHeight, colorTextHeading, fontFamily, mobileMaxWidth } = token;
   return {
     logo: css`
       height: 100%;
@@ -15,13 +11,20 @@ const useStyle = () => {
       padding-left: 10px;
   
       img {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
         margin-right: 8px;
       }
     `,
     title: css`
-      line-height: 2px;
+      color: rgba(0, 0, 0, 0.88);
+      font-weight: bold;
+      font-size: 18px;
+      font-family: AlibabaPuHuiTi,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji',sans-serif;
+      line-height: 32px;
+      letter-spacing: -0.18px;
+      white-space: nowrap;
     `,
   };
 };
@@ -35,9 +38,9 @@ const Logo: React.FC<LogoProps> = () => {
   const { logo, title } = useStyle();
   return (
     <h1 style={{ height: 64 }}>
-      <Link to="www.baidu.com" css={logo}>
-        <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" alt="logo" />
-        <span css={title}>web site title</span>
+      <Link to="/index-cn" css={logo}>
+        <img src="http://rrrjuw5md.hn-bkt.clouddn.com/git_hub_logo.jpg" alt="logo" />
+        <span css={title}>Front Peasant Worker</span>
       </Link>
     </h1>
   );

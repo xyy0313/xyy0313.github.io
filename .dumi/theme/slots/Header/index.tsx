@@ -125,6 +125,8 @@ interface HeaderState {
 const Header: React.FC = () => {
   const [isClient, setIsClient] = React.useState(false);
   const [, lang] = useLocale();
+  console.log("获取语言配置", lang);
+  
   /**
    *  获取站点配置数据:
    *  pkg: 项目的 package.json 数据
