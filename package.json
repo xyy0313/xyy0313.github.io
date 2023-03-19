@@ -7,6 +7,7 @@
     "url": "https://github.com/xyy0313/xyy0313.github.io.git"
   },
   "license": "MIT",
+  "author": "404",
   "scripts": {
     "build": "dumi build",
     "dev": "dumi dev",

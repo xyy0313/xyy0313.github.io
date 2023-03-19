@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { Link } from 'dumi';
 import * as React from 'react';
+import { useSiteData } from 'dumi';
 
 const useStyle = () => {
   return {
@@ -36,11 +37,13 @@ export interface LogoProps {
 
 const Logo: React.FC<LogoProps> = () => {
   const { logo, title } = useStyle();
+  const { pkg } = useSiteData();
   return (
     <h1 style={{ height: 64 }}>
       <Link to="/index-cn" css={logo}>
         <img src="https://github-image-xyy.oss-cn-beijing.aliyuncs.com/github-user-logo.jpg" alt="logo" />
-        <span css={title}>Front Peasant Worker</span>
+        {/* <span css={title}>Front Peasant Worker</span> */}
+        <span css={title}>{pkg.author} a front-end development engineer</span>
       </Link>
     </h1>
   );
