@@ -1,3 +1,8 @@
+/**
+ * @file SwitchBtn.tsx
+ * @description 顶部国际化语言切换组件
+ * @date 2023-03-20 22:27:55
+ */
 import { css } from '@emotion/react';
 import { Tooltip } from 'antd';
 import React from 'react';
@@ -17,7 +22,6 @@ const BASE_SIZE = '1.2em';
 
 const useStyle = () => {
   const { token } = useSiteToken();
-
   const {
     colorText,
     colorBorder,

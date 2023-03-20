@@ -1,3 +1,9 @@
+/**
+ * @file More.tsx
+ * @description 顶部导航栏更多组件
+ * @date 2023-03-20 22:25:04
+ */
+
 import { DownOutlined } from '@ant-design/icons';
 import { css } from '@emotion/react';
 import type { MenuProps } from 'antd';
@@ -6,6 +12,7 @@ import { FormattedMessage } from 'dumi';
 import React from 'react';
 import type { SharedProps } from './interface';
 import { useSiteData } from 'dumi';
+
 const useStyle = (rtl?: boolean) => ({
   smallStyle: css`
     font-size: 12px;

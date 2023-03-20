@@ -1,3 +1,8 @@
+/**
+ * @file Logo.tsx
+ * @description Logo和标题
+ * @date 2023-03-20 22:25:48
+ */
 import { css } from '@emotion/react';
 import { Link } from 'dumi';
 import * as React from 'react';
@@ -42,8 +47,7 @@ const Logo: React.FC<LogoProps> = () => {
     <h1 style={{ height: 64 }}>
       <Link to="/index-cn" css={logo}>
         <img src="https://github-image-xyy.oss-cn-beijing.aliyuncs.com/github-user-logo.jpg" alt="logo" />
-        {/* <span css={title}>Front Peasant Worker</span> */}
-        <span css={title}>{pkg.author} a front-end development engineer</span>
+        <span css={title}>{pkg.author} 一个有趣的前端开发工程师</span>
       </Link>
     </h1>
   );

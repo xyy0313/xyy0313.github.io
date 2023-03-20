@@ -167,10 +167,6 @@ const Footer: React.FC = () => {
           url: 'https://motion.ant.design',
           openExternal: true,
         },
-        {
-          title: <FormattedMessage id="app.footer.chinamirror" />,
-          url: 'https://ant-design.antgroup.com',
-        },
       ],
     };
 
@@ -383,11 +379,9 @@ const Footer: React.FC = () => {
             <div style={{ opacity: '0.4' }}>
               Made with <span style={{ color: '#fff' }}>❤</span> by
             </div>
-            <div>{locale.owner}</div>
           </>
         }
       />
-      <AdditionalInfo />
     </>
   );
 };
