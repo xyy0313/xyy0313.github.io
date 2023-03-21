@@ -53,7 +53,7 @@ export default function Banner({ children }: BannerProps) {
 
   return (
     <>
-      <div style={{ height: 780 }} >
+      <div style={{ width: "100vw", overflow: "hidden" }}>
         <Banner0 />
       </div>
       <div style={{ position: 'relative', background: '#fff' }}>

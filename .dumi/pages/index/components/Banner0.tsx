@@ -37,9 +37,8 @@ const useStyle = () => {
       display: block;
       position: absolute;
       top: 20%;
-      margin: auto;
-      left: 0;
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);  
       font-size: 14px;
       color: @template-text-color-light;
       width: 550px;
