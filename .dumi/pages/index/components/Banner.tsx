@@ -38,13 +38,9 @@ const useStyle = () => {
     }
   `,
     bannertitlewrapper: css`
-    width: 50%;
+    width: 100%;
     max-width: 480px;
-    height: 245px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 8%;
+    display: block;
     margin: auto;
     z-index: 1;
     > * {
@@ -55,6 +51,7 @@ const useStyle = () => {
       font-size: 36px;
       margin: 12px 0;
       text-align: left;
+      white-space: nowrap;
     }
     p {
       font-size: 20px;
@@ -65,15 +62,16 @@ const useStyle = () => {
         height: 28px;
         
         .gh-btn {
-          height: 28px;
+          height: 30px;
+          width: 80px;
           border-radius: 4px;
           background: rgba(243, 243, 243, 1);
           background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 100%);
           border: 1px solid #ebedf0;
-          align-items: center;
           display: flex;
-          padding: 0 12px;
-          font-size: 13px;
+          align-items: center;
+          padding: 0 15px;
+          font-size: 15px;
           box-sizing: border-box;
           margin-right: 8px;
 
@@ -81,21 +79,22 @@ const useStyle = () => {
             color: @primary-color;
           }
           .gh-ico {
-              width: 14px;
-              height: 14px;
+              width: 15px;
+              height: 15px;
               margin-right: 8px;
               background: url(https://github-image-xyy.oss-cn-beijing.aliyuncs.com/github.svg) 0 0/100% 100% no-repeat;
           }
         }
         .gh-count {
-          height: 28px;
-          line-height: 22px;
+          height: 30px;
+          line-height: 30px;
           background: #fff;
           border: 1px solid #ebedf0;
           border-radius: 4px;
-          padding: 2px 8px;
+          padding: 0px 18px;
           font-size: 13px;
           box-sizing: border-box;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 100%);
         }
       }
     }
@@ -105,15 +104,25 @@ const useStyle = () => {
     }
   `,
     bannerimagewrapper: css`
-    width: 45%;
-    max-width: 598px;
-    height: 324px;
-    position: absolute;
-    right: 8%;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+  `,
+    bannerwrapper1: css`
+    display: flex;
+    flex-wrap: wrap;
+
+    .anim-item{
+      flex: 1;
+      min-width: 300px;
+      flex-shrink: 0;
+      padding: 0 30px;
+
+      &:first-child {
+        margin-bottom: 30px;
+      }
+
+    }
   `
   };
 };
@@ -158,34 +167,37 @@ export default function Banner({ children }: BannerProps) {
             src="https://gw.alipayobjects.com/zos/bmw-prod/e152223c-bcae-4913-8938-54fda9efe330.svg"
             alt="bg"
           />
-          <div className="banner-wrapper1" style={{ position: 'relative', background: '#fff', height: 300 }}>
-            <QueueAnim
-              key="QueueAnim"
-              type={['bottom', 'top']}
-              leaveReverse
-              component="i"
-              delay={300}
-              css={styles.bannertitlewrapper}>
+          <div css={styles.bannerwrapper1}>
+            <div className='anim-item'>
+              <QueueAnim
+                key="QueueAnim"
+                type={['bottom', 'top']}
+                leaveReverse
+                component="i"
+                delay={300}
+                css={styles.bannertitlewrapper}>
 
-              <div key="line" className="title-line-wrapper">
-                <div className="title-line" style={{ transform: 'translateX(-64px)' }} />
-              </div>
+                <div key="line" className="title-line-wrapper">
+                  <div className="title-line" style={{ transform: 'translateX(-64px)' }} />
+                </div>
 
-              <h1 key="h1">开始我们之间的故事</h1>
+                <h1 key="h1">开始我们之间的故事</h1>
 
-              <div key="button" className="button-wrapper">
-                <GitHubButton
-                  key="github-button"
-                  type="stargazers"
-                  namespace="xyy0313"
-                  repo="xyy0313.github.io"
-                />
-              </div>
-            </QueueAnim>
-
-            <TweenOne animation={{ opacity: 1 }} css={styles.bannerimagewrapper}>
-              <BannerSVGAnim />
-            </TweenOne>
+                <div key="button" className="button-wrapper">
+                  <GitHubButton
+                    key="github-button"
+                    type="stargazers"
+                    namespace="xyy0313"
+                    repo="xyy0313.github.io"
+                  />
+                </div>
+              </QueueAnim>
+            </div>
+            <div className='anim-item'>
+              <TweenOne animation={{ opacity: 1 }} css={styles.bannerimagewrapper}>
+                <BannerSVGAnim />
+              </TweenOne>
+            </div>
           </div>
           {children}
         </GroupMask>
