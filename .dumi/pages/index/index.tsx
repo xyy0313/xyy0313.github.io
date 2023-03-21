@@ -12,7 +12,7 @@ const Homepage: React.FC = () => {
   return (
     <ConfigProvider theme={{ algorithm: undefined }}>
       <section>
-        <Banner />
+        <Banner></Banner>
         <div>
         </div>
       </section>

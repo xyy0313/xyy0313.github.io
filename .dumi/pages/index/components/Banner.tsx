@@ -1,13 +1,15 @@
-import { css } from '@emotion/react';
-import { Typography } from 'antd';
-import { Link, useLocation } from 'dumi';
 import * as React from 'react';
+import { css } from '@emotion/react';
+import { Link, useLocation } from 'dumi';
 import useLocale from '../../../hooks/useLocale';
 import useSiteToken from '../../../hooks/useSiteToken';
 import SiteContext from '../../../theme/slots/SiteContext';
-import * as utils from '../../../theme/utils';
 import { GroupMask } from './Group';
 import Banner0 from './Banner0';
+import QueueAnim from 'rc-queue-anim';
+import TweenOne from 'rc-tween-one';
+import GitHubButton from 'react-github-button';
+import BannerSVGAnim from './BannerSVGAnim';
 
 const locales = {
   cn: {
@@ -34,6 +36,81 @@ const useStyle = () => {
       font-weight: 900;
       font-size: 68px;
     }
+  `,
+    bannertitlewrapper: css`
+    width: 50%;
+    max-width: 480px;
+    height: 245px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8%;
+    margin: auto;
+    z-index: 1;
+    > * {
+      will-change: transform;
+    }
+    h1 {
+      font-family: "Futura", "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 36px;
+      margin: 12px 0;
+      text-align: left;
+    }
+    p {
+      font-size: 20px;
+    }
+    .button-wrapper {
+      .github-btn {
+        display: flex;
+        height: 28px;
+        
+        .gh-btn {
+          height: 28px;
+          border-radius: 4px;
+          background: rgba(243, 243, 243, 1);
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 243, 1) 100%);
+          border: 1px solid #ebedf0;
+          align-items: center;
+          display: flex;
+          padding: 0 12px;
+          font-size: 13px;
+          box-sizing: border-box;
+          margin-right: 8px;
+
+          &:hover {
+            color: @primary-color;
+          }
+          .gh-ico {
+            margin-right: 8px;
+          }
+        }
+        .gh-count {
+          height: 28px;
+          line-height: 22px;
+          background: #fff;
+          border: 1px solid #ebedf0;
+          border-radius: 4px;
+          padding: 2px 8px;
+          font-size: 13px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .title-line {
+      transform: translateX(-64px);
+      animation: bannerTitleLine 3s ease-in-out 0s infinite;
+    }
+  `,
+    bannerimagewrapper: css`
+    width: 45%;
+    max-width: 598px;
+    height: 324px;
+    position: absolute;
+    right: 8%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
   `
   };
 };
@@ -49,20 +126,18 @@ export default function Banner({ children }: BannerProps) {
   const styles = useStyle();
   const { isMobile } = React.useContext(SiteContext);
 
-  const isZhCN = utils.isZhCN(pathname);
-
   return (
     <>
-      <div style={{ height: 780 }} >
+      <div style={{ height: 800 }} >
         <Banner0 />
       </div>
-      <div style={{ position: 'relative', background: '#fff' }}>
+
+      <div style={{ position: 'relative', background: '#fff', height: 520 }}>
         <img
           style={{ position: 'absolute', right: 0, top: 240, width: 240 }}
           src="https://gw.alipayobjects.com/zos/bmw-prod/b3b8dc41-dce8-471f-9d81-9a0204f27d03.svg"
           alt="Ant Design"
         />
-
         <GroupMask
           style={{
             textAlign: 'center',
@@ -80,20 +155,35 @@ export default function Banner({ children }: BannerProps) {
             src="https://gw.alipayobjects.com/zos/bmw-prod/e152223c-bcae-4913-8938-54fda9efe330.svg"
             alt="bg"
           />
+          <div className="banner-wrapper1" style={{ position: 'relative', background: '#fff', height: 300 }}>
+            <QueueAnim
+              key="QueueAnim"
+              type={['bottom', 'top']}
+              leaveReverse
+              component="i"
+              delay={300}
+              css={styles.bannertitlewrapper}>
 
-          <Typography.Title level={1} css={[styles.titleBase, styles.title]}>
-            xyy
-          </Typography.Title>
-          <Typography.Paragraph
-            style={{
-              fontSize: isMobile ? token.fontSizeHeading5 - 2 : token.fontSizeHeading5,
-              lineHeight: isMobile ? token.lineHeightSM : token.lineHeightHeading5,
-              marginBottom: token.marginMD * 2,
-              padding: isMobile ? `0 ${token.paddingLG + 2}px` : 0,
-            }}
-          >
-            <div>{locale.slogan}</div>
-          </Typography.Paragraph>
+              <div key="line" className="title-line-wrapper">
+                <div className="title-line" style={{ transform: 'translateX(-64px)' }} />
+              </div>
+
+              <h1 key="h1">开始我们之间的故事</h1>
+
+              <div key="button" className="button-wrapper">
+                <GitHubButton
+                  key="github-button"
+                  type="stargazers"
+                  namespace="xyy0313"
+                  repo="xyy0313.github.io"
+                />
+              </div>
+            </QueueAnim>
+
+            <TweenOne animation={{ opacity: 1 }} css={styles.bannerimagewrapper}>
+              <BannerSVGAnim />
+            </TweenOne>
+          </div>
           {children}
         </GroupMask>
       </div>
