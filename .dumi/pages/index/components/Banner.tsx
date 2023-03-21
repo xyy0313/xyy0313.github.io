@@ -81,7 +81,10 @@ const useStyle = () => {
             color: @primary-color;
           }
           .gh-ico {
-            margin-right: 8px;
+              width: 14px;
+              height: 14px;
+              margin-right: 8px;
+              background: url(https://github-image-xyy.oss-cn-beijing.aliyuncs.com/github.svg) 0 0/100% 100% no-repeat;
           }
         }
         .gh-count {
