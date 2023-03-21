@@ -105,6 +105,7 @@ export default function Banner0() {
         key="QueueAnim"
         type={['bottom', 'top']}
         delay={300}
+        leaveReverse
         {...dataSource.textWrapper}
       >
         <div key="title" {...dataSource.title}>

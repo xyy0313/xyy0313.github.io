@@ -1,6 +1,6 @@
 {
   "name": "git-home",
-  "version": "laste",
+  "version": "1.0.0",
   "description": "个人主页",
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "rc-queue-anim": "^2.0.0",
     "rc-tween-one": "^3.0.6",
     "react-color": "^2.19.3",
+    "react-github-button": "^0.1.11",
     "sylvanas": "^0.6.1",
     "vanilla-jsoneditor": "^0.16.0"
   },
