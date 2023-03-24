@@ -25,6 +25,9 @@ export default defineConfig({
   publicPath: repo,
   outputPath: "home",
   extraBabelPresets: ['@emotion/babel-preset-css-prop'],
+  /**
+   * 配置 <head> 中的额外 script。
+   */
   headScripts: [
     `
     (function () {
