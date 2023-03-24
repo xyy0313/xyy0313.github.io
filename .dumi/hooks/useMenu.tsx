@@ -13,6 +13,8 @@ const useMenu = (options: UseMenuOptions = {}): [MenuProps['items'], string] => 
   const fullData = useFullSidebarData();
   const { pathname, search } = useLocation();
   const sidebarData = useSidebarData();
+  console.log("sidebarData", sidebarData);
+
   const { before, after } = options;
 
   const menuItems = useMemo<MenuProps['items']>(() => {

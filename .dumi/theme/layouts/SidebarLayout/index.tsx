@@ -18,7 +18,7 @@ const SidebarLayout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
     <main css={main}>
       <CommonHelmet />
       <Sidebar />
-      <Content>{children}</Content>
+      <Content>{children}</Content>2222
     </main>
   );
 };

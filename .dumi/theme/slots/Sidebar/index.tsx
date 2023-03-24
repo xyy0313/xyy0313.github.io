@@ -146,6 +146,7 @@ const Sidebar: React.FC = () => {
       />
     </ConfigProvider>
   );
+  console.log("menuItems", menuItems);
 
   return isMobile ? (
     <MobileMenu key="Mobile-menu">{menuChild}</MobileMenu>
