@@ -12,5 +12,9 @@
       "dumi/theme/*": [".dumi/theme/*"]
     }
   },
-  "include": ["./**/*", "../site/theme/template/Content"]
+  "include": [
+    "./**/*",
+    "../site/theme/template/Content",
+    "../components/gamecenter"
+  ]
 }

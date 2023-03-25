@@ -23,6 +23,9 @@ const locales = {
     components: '组件',
     resources: '资源',
     blog: '博客',
+    yxs: "英雄杀",
+    wzry: "王者荣耀",
+    gamecenter: "游戏中心"
   },
   en: {
     design: 'Design',
@@ -30,6 +33,9 @@ const locales = {
     components: 'Components',
     resources: 'Resources',
     blog: 'Blog',
+    yxs: "yxs",
+    wzry: "wzry",
+    gamecenter: "gamecenter"
   },
 };
 
@@ -113,7 +119,6 @@ export interface NavigationProps extends SharedProps {
 
 export default ({
   isZhCN,
-  isClient,
   isMobile,
   responsive,
   directionText,
@@ -209,19 +214,19 @@ export default ({
     },
     blogList.length
       ? {
-          label: (
-            <Link
-              to={utils.getLocalizedPathname(
-                blogList.sort((a, b) => (a.frontmatter.date > b.frontmatter.date ? -1 : 1))[0].link,
-                isZhCN,
-                search,
-              )}
-            >
-              {locale.blog}
-            </Link>
-          ),
-          key: 'docs/blog',
-        }
+        label: (
+          <Link
+            to={utils.getLocalizedPathname(
+              blogList.sort((a, b) => (a.frontmatter.date > b.frontmatter.date ? -1 : 1))[0].link,
+              isZhCN,
+              search,
+            )}
+          >
+            {locale.blog}
+          </Link>
+        ),
+        key: 'docs/blog',
+      }
       : null,
     {
       label: (
@@ -231,41 +236,48 @@ export default ({
       ),
       key: 'docs/resources',
     },
-    isZhCN &&
-    isClient &&
-    window.location.host !== 'ant-design.antgroup.com' &&
-    window.location.host !== 'ant-design.gitee.io'
-      ? {
-          label: '国内镜像',
-          key: 'mirror',
-          children: [
-            {
-              label: <a href="https://ant-design.antgroup.com">官方镜像</a>,
-              icon: (
-                <img
-                  alt="logo"
-                  src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-                  width={16}
-                  style={{ verticalAlign: 'text-bottom' }}
-                />
-              ),
-              key: 'antgroup',
-            },
-            {
-              label: <a href="https://ant-design.gitee.io">Gitee 镜像</a>,
-              icon: (
-                <img
-                  alt="gitee"
-                  src="https://gw.alipayobjects.com/zos/bmw-prod/9e91e124-9bab-4113-b500-301412f6b370.svg"
-                  width={16}
-                  style={{ verticalAlign: 'text-bottom' }}
-                />
-              ),
-              key: 'gitee',
-            },
-          ],
-        }
-      : null,
+    {
+      label: (
+        <Link to={utils.getLocalizedPathname('/docs/gamecenter/yxs', isZhCN, search)}>
+          {locale.gamecenter}
+        </Link>
+      ),
+      key: 'gamecenter',
+      children: [
+        {
+          label: (
+            <Link to={utils.getLocalizedPathname('/docs/gamecenter/yxs', isZhCN, search)}>
+              {locale.yxs}
+            </Link>
+          ),
+          icon: (
+            <img
+              alt="yxs"
+              src="https://github-image-xyy.oss-cn-beijing.aliyuncs.com/yxs.png"
+              width={16}
+              style={{ verticalAlign: 'text-bottom' }}
+            />
+          ),
+          key: 'yxs',
+        },
+        {
+          label: (
+            <Link to={utils.getLocalizedPathname('/docs/gamecenter/wzry', isZhCN, search)}>
+              {locale.wzry}
+            </Link>
+          ),
+          icon: (
+            <img
+              alt="wzry"
+              src="https://github-image-xyy.oss-cn-beijing.aliyuncs.com/wzry.png"
+              width={16}
+              style={{ verticalAlign: 'text-bottom' }}
+            />
+          ),
+          key: 'wzry',
+        },
+      ],
+    },
     ...(additional ?? []),
   ];
 
