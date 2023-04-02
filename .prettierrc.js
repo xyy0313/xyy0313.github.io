@@ -1,13 +1,20 @@
 module.exports = {
-  printWidth: 80,
-  proseWrap: 'never',
   singleQuote: true,
   trailingComma: 'all',
+  printWidth: 100,
+  proseWrap: 'never',
+  endOfLine: 'lf',
   overrides: [
     {
-      files: '*.md',
+      files: '.prettierrc',
       options: {
-        proseWrap: 'preserve',
+        parser: 'json',
+      },
+    },
+    {
+      files: 'document.ejs',
+      options: {
+        parser: 'html',
       },
     },
   ],

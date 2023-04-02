@@ -1,30 +1,23 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "baseUrl": "./",
-    "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "antd": ["components/index.ts"],
-      "antd/es/*": ["components/*"],
-      "antd/lib/*": ["components/*"],
-      "antd/locale/*": ["components/locale/*"]
-    },
-    "strictNullChecks": true,
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "skipLibCheck": true,
     "experimentalDecorators": true,
-    "jsx": "react",
-    "jsxFactory": "React.createElement",
-    "jsxFragmentFactory": "React.Fragment",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "target": "es6",
-    "lib": ["dom", "es2017"],
-    "stripInternal": true
+    "strict": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@/*": ["./src/.umi/*"],
+      "@@test/*": ["./src/.umi-test/*"]
+    }
   },
-  "include": ["**/*", ".dumi/**/*", ".dumirc.ts"],
-  "exclude": ["node_modules", "docs-dist", "typings", ".dumi/tmp*/**/*"]
+  "include": ["./**/*.d.ts", "./**/*.ts", "./**/*.tsx"]
 }
